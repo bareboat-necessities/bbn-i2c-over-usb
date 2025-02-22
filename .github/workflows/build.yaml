@@ -1,0 +1,12 @@
+# see: https://github.com/marketplace/actions/test-compile-for-arduino
+
+name: build
+on: [push, pull_request]
+jobs:
+  build:
+    name: build for MCU
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
