@@ -13,6 +13,6 @@ jobs:
 
     - name: Install pre-requisites
       run: |
-        cd bbn-i2c-over-usb/bbn-i2c-over-usb
+        cd /home/runner/work/bbn-i2c-over-usb/bbn-i2c-over-usb
         git submodule update --init --recursive
         make
