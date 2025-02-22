@@ -10,3 +10,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+
+    - name: Install pre-requisites
+      run: |
+        cd bbn-i2c-over-usb/bbn-i2c-over-usb
+        git submodule update --init --recursive
+        make
