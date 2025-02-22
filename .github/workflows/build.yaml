@@ -13,6 +13,7 @@ jobs:
 
     - name: Install pre-requisites
       run: |
+        sudo apt-get update
         sudo apt-get -y install avr-gcc binutils-avr avrdude avr-libc
         cd /home/runner/work/bbn-i2c-over-usb/bbn-i2c-over-usb
         git submodule update --init --recursive
