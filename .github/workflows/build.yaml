@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install pre-requisites
+    - name: Install pre-requisites and build
       run: |
         sudo apt-get update
         sudo apt-get -y install gcc-avr binutils-avr avrdude avr-libc
@@ -20,4 +20,12 @@ jobs:
         make
         find . -name \*.hex
 
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: /home/runner/work/bbn-i2c-over-usb/bbn-i2c-over-usb/I2CUSB.hex
+        tag: ${{ github.ref == 'refs/heads/main' && 'vTest' || github.ref }}
+        overwrite: true
+        file_glob: true
         
