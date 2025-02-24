@@ -75,6 +75,13 @@ i2c-13	i2c       	i2c-tiny-usb at bus 003 device 002	I2C adapter
 $ i2cdetect -y 13
 ```
 
+## OpenWrt support
+
+Maybe it can work on OpenWrt (not tested)
+
+https://gist.github.com/karantir/c3b123a63696a895cc9dad32168fe690
+
+
 ## Credits
 * I2C-Mega-USB [https://github.com/kasbert/I2C-Mega-USB]
 * i2c-tiny-usb. [https://github.com/harbaum/I2C-Tiny-USB]
