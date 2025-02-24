@@ -81,3 +81,5 @@ $ i2cdetect -y 13
 * LUFA - The Lightweight USB Framework for AVRs [https://github.com/abcminiuser/lufa/]
 * Arduino Core Two Wire Interface [https://github.com/arduino/ArduinoCore-avr/blob/master/libraries/Wire/src/utility/twi.c]
 * i2c-star [https://github.com/daniel-thompson/i2c-star]
+* rp2040-i2c-interface [https://github.com/Nicolai-Electronics/rp2040-i2c-interface]
+
