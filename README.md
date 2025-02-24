@@ -28,6 +28,12 @@ With i2c sensor connected:
 
 ## Loading Firmware
 
+Download firmware:
+
+```
+wget https://github.com/bareboat-necessities/bbn-i2c-over-usb/releases/download/v1.0.0/I2CUSB.hex
+```
+
 Hold reset button while pluggin your Leonardo ATmega32U4 into USB until 3 yellow lights flash to enter bootloader mode.
 
 ```
