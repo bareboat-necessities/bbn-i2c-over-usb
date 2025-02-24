@@ -1,4 +1,5 @@
-# I2C-Mega-USB ATmega32U4 clone of the i2c-tiny-usb
+# I2C-Mega-USB ATmega32U4 firmware build via GitHub actions
+
 ## Cheap and simple I²C to USB interface
 
 Attach any I2C clients (Wii Nunchuk, thermo sensor, AD converter, display, relay driver, ...) to your PC via USB ... quick, easy and cheap! Drivers for Linux, Windows and MacOS available.
@@ -11,49 +12,27 @@ I2C-Mega-USB utilizes ATmega32U4 with hardware I2C and USB, which should be bett
 
 ## Hardware setup
 
-The firmware can be easily ported but has been tested on an ATmega32U4 based breakout board (Arduino Leonardo).
-See LUFA documentatation for possible supported boards.
-Connections required are:
+## Loading Firmware
 
-- USB to host computer
-- I2C bus SDA and I2C bus SCL. Add pull up resistors, if needed (for example 2.2kohm resistors to +Vcc). ATmega has internal pull-ups, but they are often considered too weak.
-- [Optional: AVR programmer connected via ICSP connector for uploading the firmware
-- [Optional: debug only] TX1: UART TX and RX0: UART RX
+## If you wish to compile yourself
 
-If you use Arduino module with a bootloader, you can upload the firmware once without problems.
-After the board boots, the USB Vendor and Product Ids have changed and the serial interface has disappeared.
-To program the board second time, push the reset button (connect RST to GND) and quickly use avrdude to program the board.
-Another option is to use a separate programmer (for example USBtinyISP).
+- Install avr-gcc compiler toolchain and avrdude.
 
-ATmega32U4 is often run with 5V voltage, so make sure that your devices can handle it.
-However if your board provides 3.3V, you may use the pull-up resistors to get 3.3V for SDA and SCL pins, too.
-I am not an electrical engineer, so I cannot say if this won't damage your board. Works for me, though.
-
-![Arduino Leonardo wiring](images/i2c-mega-usb_bb.png)
-
-Here's a "BS Micro ATMEGA32U4" board with pull-up resistors and a connected Wii Nunchuk)
-![BS Micro ATMEGA32U4](images/bsmicro-wii.jpg)
-
-
-## Install
-
-- Install avr-gcc compiler toolchain and avrdude. If you have used Arduino IDE, you may have it already (add arduino-x.x.x/hardware/tools/avr/bin/ to PATH).
 - Clone this repo:
 ```
-git clone https://github.com/kasbert/I2C-Mega-USB
+git clone https://github.com/bareboat-necessities/bbn-i2c-over-usb
 ```
 - Fetch the libraries:
 ```
-cd I2C-Mega-USB; git submodule update --init --recursive
+cd bbn-i2c-over-usb; git submodule update --init --recursive
 ```
 - Build the firmware:
 ```
 make
 ```
-- Use programmer to install the firmware.
-```
-make avrdude
-```
+
+I2CUSB.hex is the firmware file you flash with avrdude.
+
 
 ## Examples
 
