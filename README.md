@@ -12,6 +12,12 @@ I2C-Mega-USB is a compatible clone of Till Harbaum’s i2c-tiny-usb. The firmwar
 
 ## Loading Firmware
 
+Hold reset button while pluggin your Leonardo ATmega32U4 into USB until 3 yellow lights flash to enter bootloader mode.
+
+```
+avrdude -p m32u4 -c avr109 -P /dev/ttyACM0 -U flash:w:./I2CUSB.hex 
+```
+
 ## If you wish to compile firmware yourself
 
 - Install avr-gcc compiler toolchain and avrdude.
