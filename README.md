@@ -17,7 +17,11 @@ I2C-Mega-USB utilizes ATmega32U4 with hardware I2C and USB, which should be bett
 ## If you wish to compile yourself
 
 - Install avr-gcc compiler toolchain and avrdude.
-
+On Debian:
+```
+sudo apt-get update
+sudo apt-get -y install gcc-avr binutils-avr avrdude avr-libc
+```
 - Clone this repo:
 ```
 git clone https://github.com/bareboat-necessities/bbn-i2c-over-usb
