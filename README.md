@@ -17,7 +17,7 @@ This setup uses ATmega32U4 Leonardo
 and packaged into waterproof box and wires routed via cable glands for marine use.
 
 <p align="center">
-<img src="./images/i2c-over-usb?raw=true" alt="BBN i2c over USB" style="width: 50%; height: auto;" />
+<img src="./images/i2c-over-usb.jpg?raw=true" alt="BBN i2c over USB" style="width: 50%; height: auto;" />
 </p>
 
 With i2c sensor connected:
