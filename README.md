@@ -10,6 +10,12 @@ I2C-Mega-USB is a compatible clone of Till Harbaum’s i2c-tiny-usb. The firmwar
 
 ## Hardware setup
 
+This setup uses ATmega32U4 Leonardo
+
+- https://store.arduino.cc/products/arduino-leonardo-with-headers
+
+and packaged into waterproof box and wires routed via cable glands for marine use.
+
 ## Loading Firmware
 
 Hold reset button while pluggin your Leonardo ATmega32U4 into USB until 3 yellow lights flash to enter bootloader mode.
