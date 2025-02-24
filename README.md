@@ -16,6 +16,16 @@ This setup uses ATmega32U4 Leonardo
 
 and packaged into waterproof box and wires routed via cable glands for marine use.
 
+<p align="center">
+<img src="./images/i2c-over-usb?raw=true" alt="BBN i2c over USB" style="width: 50%; height: auto;" />
+</p>
+
+With i2c sensor connected:
+
+<p align="center">
+<img src="./images/i2c-over-usb-with-sensor.jpg?raw=true" alt="BBN i2c via USB" style="width: 40%; height: auto;" />
+</p>
+
 ## Loading Firmware
 
 Hold reset button while pluggin your Leonardo ATmega32U4 into USB until 3 yellow lights flash to enter bootloader mode.
