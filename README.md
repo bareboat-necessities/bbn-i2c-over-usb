@@ -75,7 +75,7 @@ i2c-13	i2c       	i2c-tiny-usb at bus 003 device 002	I2C adapter
 $ i2cdetect -y 13
 ```
 
-## OpenWrt support
+## OpenWRT support
 
 Maybe it can work on OpenWrt (not tested)
 
