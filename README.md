@@ -91,6 +91,7 @@ in ```dmesg``` and ```i2cdetect```).
 
 
 ## Credits
+* I2C-Mega-USB [https://github.com/kasbert/I2C-Mega-USB]
 * i2c-tiny-usb. [https://github.com/harbaum/I2C-Tiny-USB]
 * LUFA - The Lightweight USB Framework for AVRs [https://github.com/abcminiuser/lufa/]
 * Arduino Core Two Wire Interface [https://github.com/arduino/ArduinoCore-avr/blob/master/libraries/Wire/src/utility/twi.c]
