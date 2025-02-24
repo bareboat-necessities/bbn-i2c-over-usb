@@ -51,18 +51,6 @@ $ i2cdetect -y 13
 ```
 
 
-To make Linux aware of I2C devices on the bus, use the following command:
-
-    $ echo bmp085 0x77 | sudo tee /sys/class/i2c-adapter/i2c-13/new_device
-
-    $ cat /sys/class/i2c-adapter/i2c-13/13-0077/temp0_input
-    # BMP085 requires a driver (https://github.com/bsapundzhiev/bmp085)
-
-Where ```bmp085``` is the name of the kernel driver you want to associate with the
-I2C device, ```0x77``` is the I2C device's 7-bit address, and ```i2c-13``` is the bus
-number the kernel assigned to the i2c-star adapter (appears as ```i2c-tiny-usb```
-in ```dmesg``` and ```i2cdetect```).
-
 
 ## Credits
 * I2C-Mega-USB [https://github.com/kasbert/I2C-Mega-USB]
