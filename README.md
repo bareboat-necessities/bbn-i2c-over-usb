@@ -4,17 +4,15 @@
 
 Attach any I2C clients (thermo sensor, AD converter, display, relay driver, ...) to your PC via USB ... quick, easy and cheap! Drivers for Linux, Windows and MacOS available.
 
-The i2c-tiny-usb project is an open source/open hardware project. The goal of i2c-tiny-usb is to provide a cheap generic i2c interface to be attached to the USB. It is meant as a replacement for those simple and cheap printer port to I2C adapters. A USB solution has several advantages incl. the built-in power supply and a more future proof interface. Furthermore no cpu intense bitbanging is required on the host side. This USB solution even requires less parts than some printer port solutions.
+The i2c-tiny-usb project is an open source/open hardware project. The goal of i2c-tiny-usb is to provide a cheap generic i2c interface to be attached to the USB. A USB solution has several advantages incl. the built-in power supply and a more future proof interface. Furthermore no cpu intense bitbanging is required on the host side. This USB solution even requires less parts than some printer port solutions.
 
-I2C-Mega-USB is a compatible clone of Till Harbaum’s i2c-tiny-usb. The firmware has no software in common with Till’s implementation but is compatible with the i2c-tiny-usb driver found in the mainline Linux kernel. As a result it will work out of the box without requiring any special software on the host computer. (Even these texts are shamelessly ripped from i2c-tiny-usb and i2c-star, which is a similar project for STM32)
-
-I2C-Mega-USB utilizes ATmega32U4 with hardware I2C and USB, which should be better than the original bitbang I2C and software USB.
+I2C-Mega-USB is a compatible clone of Till Harbaum’s i2c-tiny-usb. The firmware has no software in common with Till’s implementation but is compatible with the i2c-tiny-usb driver found in the mainline Linux kernel. As a result it will work out of the box without requiring any special software on the host computer. I2C-Mega-USB utilizes ATmega32U4 with hardware I2C and USB, which should be better than the original bitbang I2C and software USB.
 
 ## Hardware setup
 
 ## Loading Firmware
 
-## If you wish to compile yourself
+## If you wish to compile firmware yourself
 
 - Install avr-gcc compiler toolchain and avrdude.
 On Debian:
@@ -37,7 +35,6 @@ make
 
 I2CUSB.hex is the firmware file you flash with avrdude.
 
-
 ## Examples
 
 Note that the ```i2c_dev``` kernel module needs to be loaded before using any of the
@@ -49,8 +46,6 @@ $ i2cdetect -l
 i2c-13	i2c       	i2c-tiny-usb at bus 003 device 002	I2C adapter
 $ i2cdetect -y 13
 ```
-
-
 
 ## Credits
 * I2C-Mega-USB [https://github.com/kasbert/I2C-Mega-USB]
