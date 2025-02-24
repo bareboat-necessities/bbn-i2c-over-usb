@@ -43,21 +43,12 @@ I2CUSB.hex is the firmware file you flash with avrdude.
 Note that the ```i2c_dev``` kernel module needs to be loaded before using any of the
 ```i2c-tools``` utilities.
 
-Linux users may find useful to allow normal user to access the i2c device.
-
-    $ echo 'SUBSYSTEMS=="usb" ATTRS{idVendor}=="1c40" ATTRS{idProduct}=="0534" GROUP="dialout" MODE="0660"'| sudo tee /etc/udev/rules.d/99-i2c-tiny-usb.rules
-    $ sudo systemctl restart udev
-
-    $ i2cdetect -l
-    ...
-    i2c-13	i2c       	i2c-tiny-usb at bus 003 device 002	I2C adapter
-
-    $ i2cdetect -y 13
-
-    # With BMP180 you just might get some data..
-    $ i2cset -y 13 0x77 0xf4 0x2e
-    $ i2cget -y 13 0x77 0xf6 i 3
-    0x75 0x7a 0x00
+```
+$ i2cdetect -l
+...
+i2c-13	i2c       	i2c-tiny-usb at bus 003 device 002	I2C adapter
+$ i2cdetect -y 13
+```
 
 
 To make Linux aware of I2C devices on the bus, use the following command:
