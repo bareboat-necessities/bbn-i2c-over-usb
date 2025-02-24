@@ -20,7 +20,7 @@ I2C-Mega-USB utilizes ATmega32U4 with hardware I2C and USB, which should be bett
 On Debian:
 ```
 sudo apt-get update
-sudo apt-get -y install gcc-avr binutils-avr avrdude avr-libc
+sudo apt-get -y install gcc-avr binutils-avr avrdude avr-libc i2c-tools
 ```
 - Clone this repo:
 ```
